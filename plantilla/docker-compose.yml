@@ -1,0 +1,13 @@
+services:
+
+  servicio:
+    build:
+      context: ./Servicio
+    ports:
+      - "8080:8080"
+    networks:
+      - sync-network
+
+networks:
+  sync-network:
+    driver: bridge
