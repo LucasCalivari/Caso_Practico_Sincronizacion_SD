@@ -1,0 +1,55 @@
+services:
+  time-server:
+    build:
+      context: ./TimeServer
+    environment:
+      SERVER_NAME: "time-server"
+      INITIAL_OFFSET_MS: "2000"
+      RESPONSE_DELAY_MS: "0"
+    ports:
+      - "8080:8080"
+    networks:
+      - sync-network
+
+  client-a:
+    build:
+      context: ./TimeClient
+    environment:
+      CLIENT_NAME: "client-a"
+      SERVER_URL: "http://time-server:8080"
+      INITIAL_OFFSET_MS: "0"
+      SYNC_INTERVAL_SECONDS: "10"
+    depends_on:
+      - time-server
+    networks:
+      - sync-network
+
+  client-b:
+    build:
+      context: ./TimeClient
+    environment:
+      CLIENT_NAME: "client-b"
+      SERVER_URL: "http://time-server:8080"
+      INITIAL_OFFSET_MS: "8000"
+      SYNC_INTERVAL_SECONDS: "10"
+    depends_on:
+      - time-server
+    networks:
+      - sync-network
+
+  client-c:
+    build:
+      context: ./TimeClient
+    environment:
+      CLIENT_NAME: "client-c"
+      SERVER_URL: "http://time-server:8080"
+      INITIAL_OFFSET_MS: "-5000"
+      SYNC_INTERVAL_SECONDS: "10"
+    depends_on:
+      - time-server
+    networks:
+      - sync-network
+
+networks:
+  sync-network:
+    driver: bridge

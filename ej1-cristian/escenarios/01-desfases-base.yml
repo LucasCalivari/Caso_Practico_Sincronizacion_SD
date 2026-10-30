@@ -1,0 +1,3 @@
+# Escenario 1: Desfases base del enunciado (+0 s, +8 s, -5 s vs +2 s del servidor).
+# Usa la configuración de docker-compose.yml base.
+services: {}
