@@ -30,7 +30,7 @@ cd ej2-berkeley
 |---|---|---|
 | `01-desfases` | Diferencias iniciales de 5, 10 y 20 s | Desde la ronda 3 los cuatro relojes quedan a menos de 5 ms entre sí (todos a unos −1,25 s de la hora real) |
 | `02a-nodo-5min-sin-descarte` | Nodo con 5 min, entra en el promedio | El promedio da +78,8 s y todo el grupo queda unos 79 s adelantado |
-| `02b-nodo-5min-con-descarte` | Nodo con 5 min, umbral de 60 s | node3 se descarta en cada ronda y el grupo converge cerca de +5 s; node3 no recibe corrección y queda en +5 min |
+| `02b-nodo-5min-con-descarte` | Nodo con 5 min, umbral de 60 s | node3 queda fuera del promedio en la ronda 1 pero recibe su corrección (−295 s); desde la ronda 2 participa y los cuatro relojes convergen cerca de +5 s |
 | `03-desconexion` | Desconexión de un participante | El coordinador sigue con los nodos disponibles; node2 vuelve con +10 s y arrastra al grupo unos 2,8 s |
 | `04-coordinador-caido` | (Extra) Caída del coordinador | Los nodos conservan su último offset y dejan de recibir ajustes |
 
