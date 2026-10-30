@@ -1,0 +1,4 @@
+# Escenario 3: desconexión de un participante.
+# Mismos valores que el base; el script detiene node2 después de la primera
+# ronda y lo vuelve a levantar dos rondas más tarde.
+services: {}

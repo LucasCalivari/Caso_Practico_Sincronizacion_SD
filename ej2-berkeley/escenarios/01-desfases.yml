@@ -1,0 +1,3 @@
+# Escenario 1: desfases iniciales de 5, 10 y 20 segundos.
+# Usa los valores del docker-compose.yml base (+5 s, +10 s, -20 s); este archivo no cambia nada.
+services: {}
