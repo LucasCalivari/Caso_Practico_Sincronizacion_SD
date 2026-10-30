@@ -106,8 +106,10 @@ while (!stopping.IsCancellationRequested)
             Log($"Promedio de diferencias: {meanMs:F1} ms " +
                 $"({accepted.Count} nodos + coordinador)");
 
-            // 4) Enviar a cada nodo su corrección: promedio - su diferencia
-            foreach (var a in accepted)
+            // 4) Enviar a cada nodo su corrección: promedio - su diferencia.
+            //    Los nodos descartados no entran en el promedio, pero también
+            //    reciben su corrección para alinearse con el resto del grupo.
+            foreach (var a in measurements)
             {
                 double correctionMs = meanMs - a.DifferenceMs;
                 try
@@ -116,7 +118,8 @@ while (!stopping.IsCancellationRequested)
                         $"{a.Node}/api/clock/adjust",
                         new { DeltaMs = correctionMs }, stopping.Token);
                     response.EnsureSuccessStatusCode();
-                    Log($"Corrección enviada a {NodeName(a.Node)}: {correctionMs:F1} ms");
+                    var nota = accepted.Contains(a) ? "" : " (nodo descartado del promedio)";
+                    Log($"Corrección enviada a {NodeName(a.Node)}: {correctionMs:F1} ms{nota}");
                 }
                 catch (Exception ex) when (!stopping.IsCancellationRequested)
                 {
