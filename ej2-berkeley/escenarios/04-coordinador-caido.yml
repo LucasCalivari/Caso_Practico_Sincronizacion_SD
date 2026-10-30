@@ -1,0 +1,5 @@
+# Escenario 4 (opcional): caída del coordinador.
+# Mismos valores que el base; el script detiene el coordinador después de dos
+# rondas y consulta a los nodos para mostrar que conservan su hora pero ya no
+# reciben ajustes.
+services: {}

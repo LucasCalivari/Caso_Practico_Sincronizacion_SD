@@ -1,0 +1,73 @@
+# Ej. 2 Berkeley - escenario 02b-nodo-5min-con-descarte
+# Generado: 2026-10-30T18:07:56
+
+[2026-10-30T21:07:03.094Z] [coordinator] [2026-10-30T21:07:03.092Z] Coordinador Berkeley iniciado. Nodos=[node1, node2, node3], intervalo=15 s, umbral=60000 ms
+[2026-10-30T21:07:03.136Z] [node3] [2026-10-30T21:12:03.133Z] Nodo iniciado (offset inicial = 300000 ms)
+[2026-10-30T21:07:03.142Z] [node2] [2026-10-30T21:07:13.138Z] Nodo iniciado (offset inicial = 10000 ms)
+[2026-10-30T21:07:03.144Z] [node1] [2026-10-30T21:07:08.141Z] Nodo iniciado (offset inicial = 5000 ms)
+[2026-10-30T21:07:06.111Z] [coordinator] [2026-10-30T21:07:06.111Z] --- Ronda 1 (offset del coordinador = 0.0 ms) ---
+[2026-10-30T21:07:06.229Z] [node1] [2026-10-30T21:07:11.229Z] Consulta de hora respondida (demora=0 ms, offset=5000.0 ms)
+[2026-10-30T21:07:06.289Z] [coordinator] [2026-10-30T21:07:06.289Z] node1: diferencia=5029.5 ms, RTT=177.2 ms
+[2026-10-30T21:07:06.318Z] [node2] [2026-10-30T21:07:16.318Z] Consulta de hora respondida (demora=0 ms, offset=10000.0 ms)
+[2026-10-30T21:07:06.320Z] [coordinator] [2026-10-30T21:07:06.320Z] node2: diferencia=10013.3 ms, RTT=31.1 ms
+[2026-10-30T21:07:06.351Z] [node3] [2026-10-30T21:12:06.351Z] Consulta de hora respondida (demora=0 ms, offset=300000.0 ms)
+[2026-10-30T21:07:06.352Z] [coordinator] [2026-10-30T21:07:06.352Z] node3: diferencia=300014.4 ms, RTT=32.5 ms
+[2026-10-30T21:07:06.354Z] [coordinator] [2026-10-30T21:07:06.354Z] Descartado por desfase excesivo: node3 (300014.4 ms, umbral 60000 ms)
+[2026-10-30T21:07:06.355Z] [coordinator] [2026-10-30T21:07:06.355Z] Promedio de diferencias: 5014.3 ms (2 nodos + coordinador)
+[2026-10-30T21:07:06.390Z] [node1] [2026-10-30T21:07:11.375Z] Ajuste recibido: -15.2 ms (offset 5000.0 -> 4984.8 ms)
+[2026-10-30T21:07:06.395Z] [coordinator] [2026-10-30T21:07:06.395Z] Corrección enviada a node1: -15.2 ms
+[2026-10-30T21:07:06.426Z] [node2] [2026-10-30T21:07:11.427Z] Ajuste recibido: -4999.0 ms (offset 10000.0 -> 5001.0 ms)
+[2026-10-30T21:07:06.429Z] [coordinator] [2026-10-30T21:07:06.429Z] Corrección enviada a node2: -4999.0 ms
+[2026-10-30T21:07:06.429Z] [coordinator] [2026-10-30T21:07:11.443Z] Nuevo offset del coordinador: 5014.3 ms
+[2026-10-30T21:07:21.432Z] [coordinator] [2026-10-30T21:07:26.446Z] --- Ronda 2 (offset del coordinador = 5014.3 ms) ---
+[2026-10-30T21:07:21.442Z] [node1] [2026-10-30T21:07:26.427Z] Consulta de hora respondida (demora=0 ms, offset=4984.8 ms)
+[2026-10-30T21:07:21.447Z] [coordinator] [2026-10-30T21:07:26.461Z] node1: diferencia=-27.1 ms, RTT=14.1 ms
+[2026-10-30T21:07:21.453Z] [node2] [2026-10-30T21:07:26.454Z] Consulta de hora respondida (demora=0 ms, offset=5001.0 ms)
+[2026-10-30T21:07:21.454Z] [coordinator] [2026-10-30T21:07:26.469Z] node2: diferencia=-11.3 ms, RTT=7.6 ms
+[2026-10-30T21:07:21.462Z] [node3] [2026-10-30T21:12:21.462Z] Consulta de hora respondida (demora=0 ms, offset=300000.0 ms)
+[2026-10-30T21:07:21.463Z] [coordinator] [2026-10-30T21:07:26.478Z] node3: diferencia=294988.9 ms, RTT=8.9 ms
+[2026-10-30T21:07:21.464Z] [coordinator] [2026-10-30T21:07:26.478Z] Descartado por desfase excesivo: node3 (294988.9 ms, umbral 60000 ms)
+[2026-10-30T21:07:21.464Z] [coordinator] [2026-10-30T21:07:26.478Z] Promedio de diferencias: -12.8 ms (2 nodos + coordinador)
+[2026-10-30T21:07:21.467Z] [node1] [2026-10-30T21:07:26.466Z] Ajuste recibido: 14.3 ms (offset 4984.8 -> 4999.1 ms)
+[2026-10-30T21:07:21.468Z] [coordinator] [2026-10-30T21:07:26.482Z] Corrección enviada a node1: 14.3 ms
+[2026-10-30T21:07:21.470Z] [node2] [2026-10-30T21:07:26.470Z] Ajuste recibido: -1.5 ms (offset 5001.0 -> 4999.4 ms)
+[2026-10-30T21:07:21.471Z] [coordinator] [2026-10-30T21:07:26.473Z] Nuevo offset del coordinador: 5001.5 ms
+[2026-10-30T21:07:21.471Z] [coordinator] [2026-10-30T21:07:26.485Z] Corrección enviada a node2: -1.5 ms
+[2026-10-30T21:07:36.481Z] [coordinator] [2026-10-30T21:07:41.483Z] --- Ronda 3 (offset del coordinador = 5001.5 ms) ---
+[2026-10-30T21:07:36.490Z] [node1] [2026-10-30T21:07:41.489Z] Consulta de hora respondida (demora=0 ms, offset=4999.1 ms)
+[2026-10-30T21:07:36.494Z] [coordinator] [2026-10-30T21:07:41.495Z] node1: diferencia=-0.3 ms, RTT=12.3 ms
+[2026-10-30T21:07:36.499Z] [node2] [2026-10-30T21:07:41.498Z] Consulta de hora respondida (demora=0 ms, offset=4999.4 ms)
+[2026-10-30T21:07:36.500Z] [coordinator] [2026-10-30T21:07:41.502Z] node2: diferencia=-0.5 ms, RTT=6.4 ms
+[2026-10-30T21:07:36.508Z] [node3] [2026-10-30T21:12:36.507Z] Consulta de hora respondida (demora=0 ms, offset=300000.0 ms)
+[2026-10-30T21:07:36.510Z] [coordinator] [2026-10-30T21:07:41.511Z] Descartado por desfase excesivo: node3 (295000.9 ms, umbral 60000 ms)
+[2026-10-30T21:07:36.510Z] [coordinator] [2026-10-30T21:07:41.511Z] node3: diferencia=295000.9 ms, RTT=9.4 ms
+[2026-10-30T21:07:36.510Z] [coordinator] [2026-10-30T21:07:41.511Z] Promedio de diferencias: -0.3 ms (2 nodos + coordinador)
+[2026-10-30T21:07:36.513Z] [node1] [2026-10-30T21:07:41.512Z] Ajuste recibido: 0.1 ms (offset 4999.1 -> 4999.2 ms)
+[2026-10-30T21:07:36.514Z] [coordinator] [2026-10-30T21:07:41.516Z] Corrección enviada a node1: 0.1 ms
+[2026-10-30T21:07:36.517Z] [node2] [2026-10-30T21:07:41.516Z] Ajuste recibido: 0.2 ms (offset 4999.4 -> 4999.7 ms)
+[2026-10-30T21:07:36.524Z] [coordinator] [2026-10-30T21:07:41.525Z] Corrección enviada a node2: 0.2 ms
+[2026-10-30T21:07:36.524Z] [coordinator] [2026-10-30T21:07:41.525Z] Nuevo offset del coordinador: 5001.2 ms
+[2026-10-30T21:07:51.524Z] [coordinator] [2026-10-30T21:07:56.526Z] --- Ronda 4 (offset del coordinador = 5001.2 ms) ---
+[2026-10-30T21:07:51.529Z] [node1] [2026-10-30T21:07:56.529Z] Consulta de hora respondida (demora=0 ms, offset=4999.2 ms)
+[2026-10-30T21:07:51.531Z] [coordinator] [2026-10-30T21:07:56.533Z] node1: diferencia=-0.7 ms, RTT=6.7 ms
+[2026-10-30T21:07:51.534Z] [node2] [2026-10-30T21:07:56.534Z] Consulta de hora respondida (demora=0 ms, offset=4999.7 ms)
+[2026-10-30T21:07:51.536Z] [coordinator] [2026-10-30T21:07:56.537Z] node2: diferencia=-1.2 ms, RTT=4.2 ms
+[2026-10-30T21:07:51.538Z] [node3] [2026-10-30T21:12:51.538Z] Consulta de hora respondida (demora=0 ms, offset=300000.0 ms)
+[2026-10-30T21:07:51.555Z] [coordinator] [2026-10-30T21:07:56.556Z] Descartado por desfase excesivo: node3 (294992.0 ms, umbral 60000 ms)
+[2026-10-30T21:07:51.555Z] [coordinator] [2026-10-30T21:07:56.556Z] node3: diferencia=294992.0 ms, RTT=18.6 ms
+[2026-10-30T21:07:51.555Z] [coordinator] [2026-10-30T21:07:56.556Z] Promedio de diferencias: -0.6 ms (2 nodos + coordinador)
+[2026-10-30T21:07:51.558Z] [node1] [2026-10-30T21:07:56.557Z] Ajuste recibido: 0.1 ms (offset 4999.2 -> 4999.2 ms)
+[2026-10-30T21:07:51.560Z] [coordinator] [2026-10-30T21:07:56.561Z] Corrección enviada a node1: 0.1 ms
+[2026-10-30T21:07:51.562Z] [node2] [2026-10-30T21:07:56.562Z] Ajuste recibido: 0.6 ms (offset 4999.7 -> 5000.2 ms)
+[2026-10-30T21:07:51.563Z] [coordinator] [2026-10-30T21:07:56.564Z] Corrección enviada a node2: 0.6 ms
+[2026-10-30T21:07:51.563Z] [coordinator] [2026-10-30T21:07:56.564Z] Nuevo offset del coordinador: 5000.6 ms
+
+=== Estado de los nodos, hora local (antes de la primera ronda) ===
+node1: hora=30/10/2026 18:07:10 offset=5000 ms
+node2: hora=30/10/2026 18:07:15 offset=10000 ms
+node3: hora=30/10/2026 18:12:05 offset=300000 ms
+
+=== Estado de los nodos, hora local (al final) ===
+node1: hora=30/10/2026 18:08:00 offset=4999.2 ms
+node2: hora=30/10/2026 18:08:00 offset=5000.2 ms
+node3: hora=30/10/2026 18:12:55 offset=300000 ms
