@@ -1,0 +1,6 @@
+# Escenario 2: Alta latencia de red (demora artificial de 300 ms en el servidor de tiempo).
+# Permite analizar cómo la latencia y el RTT afectan el margen de incertidumbre (+- RTT/2).
+services:
+  time-server:
+    environment:
+      RESPONSE_DELAY_MS: "300"

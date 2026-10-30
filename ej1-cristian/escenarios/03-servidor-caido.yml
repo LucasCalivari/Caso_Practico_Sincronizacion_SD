@@ -1,0 +1,14 @@
+# Escenario 3: Caída del servidor de tiempo central.
+# Los clientes consultan con un timeout corto de 2 segundos.
+# Al caer el servidor, registran la falla, mantienen su reloj lógico
+# y continúan registrando operaciones localmente sin bloquearse.
+services:
+  client-a:
+    environment:
+      TIMEOUT_SECONDS: "2"
+  client-b:
+    environment:
+      TIMEOUT_SECONDS: "2"
+  client-c:
+    environment:
+      TIMEOUT_SECONDS: "2"

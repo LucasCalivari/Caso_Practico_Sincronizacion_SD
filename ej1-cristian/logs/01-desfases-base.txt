@@ -1,0 +1,139 @@
+﻿# Ej. 1 Cristian - escenario 01-desfases-base
+# Generado: 2026-10-30T20:32:30
+
+[2026-10-30T23:31:50.954Z] [client-b] [2026-10-30T23:31:58.906Z] Cliente Cristian iniciado. Servidor destino: http://time-server:8080. Offset inicial: +8000.0 ms
+[2026-10-30T23:31:51.123Z] [time-server] [2026-10-30T23:31:53.101Z] Servidor de tiempo iniciado. Offset inicial: 2000.0 ms (Escuchando en http://+:8080)
+[2026-10-30T23:31:51.391Z] [client-a] [2026-10-30T23:31:51.385Z] Cliente Cristian iniciado. Servidor destino: http://time-server:8080. Offset inicial: 0.0 ms
+[2026-10-30T23:31:51.434Z] [client-c] [2026-10-30T23:31:46.431Z] Cliente Cristian iniciado. Servidor destino: http://time-server:8080. Offset inicial: -5000.0 ms
+[2026-10-30T23:31:53.971Z] [client-b] [2026-10-30T23:32:01.971Z] [OPERACION PRE-SYNC] OpID=OP-client-b-01 registrada con hora local desfasada: 2026-10-30T23:32:01.971Z (Offset: +8000.0 ms)
+[2026-10-30T23:31:53.972Z] [client-b] [2026-10-30T23:32:01.972Z] --- Ronda de sincronización #1 (Cristian) ---
+[2026-10-30T23:31:53.973Z] [client-b] [2026-10-30T23:32:01.973Z] [Punto 1] Consultando http://time-server:8080/api/time?client=client-b...
+[2026-10-30T23:31:53.973Z] [client-b] [2026-10-30T23:32:01.973Z] [Punto 2] Instante T0 (envío): 2026-10-30T23:32:01.972Z
+[2026-10-30T23:31:54.312Z] [time-server] [2026-10-30T23:31:56.312Z] Hora despachada a [client-b]: 2026-10-30T23:31:56.312Z (demora=0 ms, offset=2000.0 ms)
+[2026-10-30T23:31:54.396Z] [client-a] [2026-10-30T23:31:54.396Z] [OPERACION PRE-SYNC] OpID=OP-client-a-01 registrada con hora local desfasada: 2026-10-30T23:31:54.396Z (Offset: 0.0 ms)
+[2026-10-30T23:31:54.400Z] [client-a] [2026-10-30T23:31:54.400Z] --- Ronda de sincronización #1 (Cristian) ---
+[2026-10-30T23:31:54.401Z] [client-a] [2026-10-30T23:31:54.401Z] [Punto 1] Consultando http://time-server:8080/api/time?client=client-a...
+[2026-10-30T23:31:54.401Z] [client-a] [2026-10-30T23:31:54.401Z] [Punto 2] Instante T0 (envío): 2026-10-30T23:31:54.400Z
+[2026-10-30T23:31:54.442Z] [client-c] [2026-10-30T23:31:49.442Z] [OPERACION PRE-SYNC] OpID=OP-client-c-01 registrada con hora local desfasada: 2026-10-30T23:31:49.442Z (Offset: -5000.0 ms)
+[2026-10-30T23:31:54.447Z] [client-c] [2026-10-30T23:31:49.447Z] --- Ronda de sincronización #1 (Cristian) ---
+[2026-10-30T23:31:54.448Z] [client-c] [2026-10-30T23:31:49.448Z] [Punto 1] Consultando http://time-server:8080/api/time?client=client-c...
+[2026-10-30T23:31:54.448Z] [client-c] [2026-10-30T23:31:49.448Z] [Punto 2] Instante T0 (envío): 2026-10-30T23:31:49.448Z
+[2026-10-30T23:31:54.542Z] [client-b] [2026-10-30T23:32:02.542Z] [Punto 3] Instante T1 (recepción): 2026-10-30T23:32:02.542Z
+[2026-10-30T23:31:54.542Z] [client-b] [2026-10-30T23:32:02.542Z] Hora reportada por el servidor (T_server): 2026-10-30T23:31:56.312Z (Offset servidor: +2000.0 ms)
+[2026-10-30T23:31:54.543Z] [client-b] [2026-10-30T23:31:56.598Z] [Punto 6] Reloj lógico ajustado sin tocar el reloj del SO. Corrección aplicada: -5945.0 ms. (Offset: +8000.0 ms -> +2055.0 ms)
+[2026-10-30T23:31:54.543Z] [client-b] [2026-10-30T23:32:02.543Z] [Punto 4] RTT calculado: 570.09 ms (Retardo unidireccional estimado RTT/2: 285.04 ms)
+[2026-10-30T23:31:54.543Z] [client-b] [2026-10-30T23:32:02.543Z] [Punto 5] Hora estimada por Cristian [T_server + RTT/2]: 2026-10-30T23:31:56.597Z (Incertidumbre: ±285.04 ms)
+[2026-10-30T23:31:54.544Z] [client-b] [2026-10-30T23:31:56.599Z] [OPERACION POST-SYNC] OpID=OP-client-b-02 registrada con hora sincronizada: 2026-10-30T23:31:56.599Z (Consistente con servidor)
+[2026-10-30T23:31:54.544Z] [client-b] [2026-10-30T23:31:56.599Z] [Punto 7] RESULTADO SINCRONIZACIÓN:
+[2026-10-30T23:31:54.553Z] [time-server] [2026-10-30T23:31:56.553Z] Hora despachada a [client-a]: 2026-10-30T23:31:56.553Z (demora=0 ms, offset=2000.0 ms)
+[2026-10-30T23:31:54.620Z] [time-server] [2026-10-30T23:31:56.620Z] Hora despachada a [client-c]: 2026-10-30T23:31:56.620Z (demora=0 ms, offset=2000.0 ms)
+[2026-10-30T23:31:54.628Z] [client-a] [2026-10-30T23:31:54.628Z] [Punto 3] Instante T1 (recepción): 2026-10-30T23:31:54.628Z
+[2026-10-30T23:31:54.629Z] [client-a] [2026-10-30T23:31:54.629Z] [Punto 4] RTT calculado: 228.30 ms (Retardo unidireccional estimado RTT/2: 114.15 ms)
+[2026-10-30T23:31:54.629Z] [client-a] [2026-10-30T23:31:54.629Z] [Punto 5] Hora estimada por Cristian [T_server + RTT/2]: 2026-10-30T23:31:56.668Z (Incertidumbre: ±114.15 ms)
+[2026-10-30T23:31:54.629Z] [client-a] [2026-10-30T23:31:54.629Z] Hora reportada por el servidor (T_server): 2026-10-30T23:31:56.553Z (Offset servidor: +2000.0 ms)
+[2026-10-30T23:31:54.630Z] [client-a] [2026-10-30T23:31:56.669Z] [OPERACION POST-SYNC] OpID=OP-client-a-02 registrada con hora sincronizada: 2026-10-30T23:31:56.669Z (Consistente con servidor)
+[2026-10-30T23:31:54.630Z] [client-a] [2026-10-30T23:31:56.669Z] [Punto 6] Reloj lógico ajustado sin tocar el reloj del SO. Corrección aplicada: +2039.2 ms. (Offset: 0.0 ms -> +2039.2 ms)
+[2026-10-30T23:31:54.630Z] [client-a] [2026-10-30T23:31:56.669Z] [Punto 7] RESULTADO SINCRONIZACIÓN:
+[2026-10-30T23:31:54.688Z] [client-c] [2026-10-30T23:31:49.688Z] [Punto 3] Instante T1 (recepción): 2026-10-30T23:31:49.688Z
+[2026-10-30T23:31:54.688Z] [client-c] [2026-10-30T23:31:49.688Z] [Punto 4] RTT calculado: 240.34 ms (Retardo unidireccional estimado RTT/2: 120.17 ms)
+[2026-10-30T23:31:54.688Z] [client-c] [2026-10-30T23:31:49.688Z] [Punto 5] Hora estimada por Cristian [T_server + RTT/2]: 2026-10-30T23:31:56.740Z (Incertidumbre: ±120.17 ms)
+[2026-10-30T23:31:54.688Z] [client-c] [2026-10-30T23:31:49.688Z] Hora reportada por el servidor (T_server): 2026-10-30T23:31:56.620Z (Offset servidor: +2000.0 ms)
+[2026-10-30T23:31:54.688Z] [client-c] [2026-10-30T23:31:56.741Z] [Punto 6] Reloj lógico ajustado sin tocar el reloj del SO. Corrección aplicada: +7052.3 ms. (Offset: -5000.0 ms -> +2052.3 ms)
+[2026-10-30T23:31:54.688Z] [client-c] [2026-10-30T23:31:56.741Z] [Punto 7] RESULTADO SINCRONIZACIÓN:
+[2026-10-30T23:31:54.689Z] [client-c] [2026-10-30T23:31:56.741Z] [OPERACION POST-SYNC] OpID=OP-client-c-02 registrada con hora sincronizada: 2026-10-30T23:31:56.741Z (Consistente con servidor)
+[2026-10-30T23:32:04.547Z] [client-b] [2026-10-30T23:32:06.601Z] --- Ronda de sincronización #2 (Cristian) ---
+[2026-10-30T23:32:04.547Z] [client-b] [2026-10-30T23:32:06.602Z] [Punto 1] Consultando http://time-server:8080/api/time?client=client-b...
+[2026-10-30T23:32:04.547Z] [client-b] [2026-10-30T23:32:06.602Z] [Punto 2] Instante T0 (envío): 2026-10-30T23:32:06.602Z
+[2026-10-30T23:32:04.552Z] [time-server] [2026-10-30T23:32:06.552Z] Hora despachada a [client-b]: 2026-10-30T23:32:06.552Z (demora=0 ms, offset=2000.0 ms)
+[2026-10-30T23:32:04.554Z] [client-b] [2026-10-30T23:32:06.556Z] [Punto 6] Reloj lógico ajustado sin tocar el reloj del SO. Corrección aplicada: -53.3 ms. (Offset: +2055.0 ms -> +2001.6 ms)
+[2026-10-30T23:32:04.554Z] [client-b] [2026-10-30T23:32:06.556Z] [Punto 7] RESULTADO SINCRONIZACIÓN:
+[2026-10-30T23:32:04.554Z] [client-b] [2026-10-30T23:32:06.609Z] [Punto 3] Instante T1 (recepción): 2026-10-30T23:32:06.609Z
+[2026-10-30T23:32:04.554Z] [client-b] [2026-10-30T23:32:06.609Z] [Punto 4] RTT calculado: 7.58 ms (Retardo unidireccional estimado RTT/2: 3.79 ms)
+[2026-10-30T23:32:04.554Z] [client-b] [2026-10-30T23:32:06.609Z] [Punto 5] Hora estimada por Cristian [T_server + RTT/2]: 2026-10-30T23:32:06.556Z (Incertidumbre: ±3.79 ms)
+[2026-10-30T23:32:04.554Z] [client-b] [2026-10-30T23:32:06.609Z] Hora reportada por el servidor (T_server): 2026-10-30T23:32:06.552Z (Offset servidor: +2000.0 ms)
+[2026-10-30T23:32:04.635Z] [client-a] [2026-10-30T23:32:06.673Z] --- Ronda de sincronización #2 (Cristian) ---
+[2026-10-30T23:32:04.635Z] [client-a] [2026-10-30T23:32:06.674Z] [Punto 1] Consultando http://time-server:8080/api/time?client=client-a...
+[2026-10-30T23:32:04.635Z] [client-a] [2026-10-30T23:32:06.674Z] [Punto 2] Instante T0 (envío): 2026-10-30T23:32:06.674Z
+[2026-10-30T23:32:04.638Z] [time-server] [2026-10-30T23:32:06.638Z] Hora despachada a [client-a]: 2026-10-30T23:32:06.638Z (demora=0 ms, offset=2000.0 ms)
+[2026-10-30T23:32:04.640Z] [client-a] [2026-10-30T23:32:06.640Z] [Punto 6] Reloj lógico ajustado sin tocar el reloj del SO. Corrección aplicada: -38.9 ms. (Offset: +2039.2 ms -> +2000.3 ms)
+[2026-10-30T23:32:04.640Z] [client-a] [2026-10-30T23:32:06.679Z] [Punto 3] Instante T1 (recepción): 2026-10-30T23:32:06.679Z
+[2026-10-30T23:32:04.640Z] [client-a] [2026-10-30T23:32:06.679Z] [Punto 4] RTT calculado: 4.88 ms (Retardo unidireccional estimado RTT/2: 2.44 ms)
+[2026-10-30T23:32:04.640Z] [client-a] [2026-10-30T23:32:06.679Z] [Punto 5] Hora estimada por Cristian [T_server + RTT/2]: 2026-10-30T23:32:06.640Z (Incertidumbre: ±2.44 ms)
+[2026-10-30T23:32:04.640Z] [client-a] [2026-10-30T23:32:06.679Z] Hora reportada por el servidor (T_server): 2026-10-30T23:32:06.638Z (Offset servidor: +2000.0 ms)
+[2026-10-30T23:32:04.641Z] [client-a] [2026-10-30T23:32:06.641Z] [Punto 7] RESULTADO SINCRONIZACIÓN:
+[2026-10-30T23:32:04.694Z] [client-c] [2026-10-30T23:32:06.746Z] --- Ronda de sincronización #2 (Cristian) ---
+[2026-10-30T23:32:04.694Z] [client-c] [2026-10-30T23:32:06.746Z] [Punto 1] Consultando http://time-server:8080/api/time?client=client-c...
+[2026-10-30T23:32:04.694Z] [client-c] [2026-10-30T23:32:06.746Z] [Punto 2] Instante T0 (envío): 2026-10-30T23:32:06.746Z
+[2026-10-30T23:32:04.697Z] [time-server] [2026-10-30T23:32:06.697Z] Hora despachada a [client-c]: 2026-10-30T23:32:06.697Z (demora=0 ms, offset=2000.0 ms)
+[2026-10-30T23:32:04.704Z] [client-c] [2026-10-30T23:32:06.757Z] [Punto 3] Instante T1 (recepción): 2026-10-30T23:32:06.756Z
+[2026-10-30T23:32:04.704Z] [client-c] [2026-10-30T23:32:06.757Z] [Punto 4] RTT calculado: 10.14 ms (Retardo unidireccional estimado RTT/2: 5.07 ms)
+[2026-10-30T23:32:04.704Z] [client-c] [2026-10-30T23:32:06.757Z] [Punto 5] Hora estimada por Cristian [T_server + RTT/2]: 2026-10-30T23:32:06.702Z (Incertidumbre: ±5.07 ms)
+[2026-10-30T23:32:04.704Z] [client-c] [2026-10-30T23:32:06.757Z] Hora reportada por el servidor (T_server): 2026-10-30T23:32:06.697Z (Offset servidor: +2000.0 ms)
+[2026-10-30T23:32:04.705Z] [client-c] [2026-10-30T23:32:06.703Z] [Punto 6] Reloj lógico ajustado sin tocar el reloj del SO. Corrección aplicada: -54.2 ms. (Offset: +2052.3 ms -> +1998.1 ms)
+[2026-10-30T23:32:04.705Z] [client-c] [2026-10-30T23:32:06.703Z] [Punto 7] RESULTADO SINCRONIZACIÓN:
+[2026-10-30T23:32:14.554Z] [client-b] [2026-10-30T23:32:16.555Z] --- Ronda de sincronización #3 (Cristian) ---
+[2026-10-30T23:32:14.554Z] [client-b] [2026-10-30T23:32:16.556Z] [Punto 1] Consultando http://time-server:8080/api/time?client=client-b...
+[2026-10-30T23:32:14.554Z] [client-b] [2026-10-30T23:32:16.556Z] [Punto 2] Instante T0 (envío): 2026-10-30T23:32:16.556Z
+[2026-10-30T23:32:14.560Z] [time-server] [2026-10-30T23:32:16.560Z] Hora despachada a [client-b]: 2026-10-30T23:32:16.560Z (demora=0 ms, offset=2000.0 ms)
+[2026-10-30T23:32:14.587Z] [client-b] [2026-10-30T23:32:16.577Z] [Punto 6] Reloj lógico ajustado sin tocar el reloj del SO. Corrección aplicada: -12.2 ms. (Offset: +2001.6 ms -> +1989.5 ms)
+[2026-10-30T23:32:14.587Z] [client-b] [2026-10-30T23:32:16.577Z] [Punto 7] RESULTADO SINCRONIZACIÓN:
+[2026-10-30T23:32:14.587Z] [client-b] [2026-10-30T23:32:16.589Z] [Punto 3] Instante T1 (recepción): 2026-10-30T23:32:16.589Z
+[2026-10-30T23:32:14.587Z] [client-b] [2026-10-30T23:32:16.589Z] [Punto 4] RTT calculado: 32.94 ms (Retardo unidireccional estimado RTT/2: 16.47 ms)
+[2026-10-30T23:32:14.587Z] [client-b] [2026-10-30T23:32:16.589Z] [Punto 5] Hora estimada por Cristian [T_server + RTT/2]: 2026-10-30T23:32:16.576Z (Incertidumbre: ±16.47 ms)
+[2026-10-30T23:32:14.587Z] [client-b] [2026-10-30T23:32:16.589Z] Hora reportada por el servidor (T_server): 2026-10-30T23:32:16.560Z (Offset servidor: +2000.0 ms)
+[2026-10-30T23:32:14.642Z] [client-a] [2026-10-30T23:32:16.642Z] --- Ronda de sincronización #3 (Cristian) ---
+[2026-10-30T23:32:14.644Z] [client-a] [2026-10-30T23:32:16.644Z] [Punto 1] Consultando http://time-server:8080/api/time?client=client-a...
+[2026-10-30T23:32:14.644Z] [client-a] [2026-10-30T23:32:16.644Z] [Punto 2] Instante T0 (envío): 2026-10-30T23:32:16.644Z
+[2026-10-30T23:32:14.648Z] [time-server] [2026-10-30T23:32:16.648Z] Hora despachada a [client-a]: 2026-10-30T23:32:16.648Z (demora=0 ms, offset=2000.0 ms)
+[2026-10-30T23:32:14.654Z] [client-a] [2026-10-30T23:32:16.654Z] [Punto 3] Instante T1 (recepción): 2026-10-30T23:32:16.654Z
+[2026-10-30T23:32:14.654Z] [client-a] [2026-10-30T23:32:16.654Z] [Punto 4] RTT calculado: 9.93 ms (Retardo unidireccional estimado RTT/2: 4.96 ms)
+[2026-10-30T23:32:14.654Z] [client-a] [2026-10-30T23:32:16.654Z] [Punto 5] Hora estimada por Cristian [T_server + RTT/2]: 2026-10-30T23:32:16.653Z (Incertidumbre: ±4.96 ms)
+[2026-10-30T23:32:14.654Z] [client-a] [2026-10-30T23:32:16.654Z] [Punto 6] Reloj lógico ajustado sin tocar el reloj del SO. Corrección aplicada: -0.9 ms. (Offset: +2000.3 ms -> +1999.4 ms)
+[2026-10-30T23:32:14.654Z] [client-a] [2026-10-30T23:32:16.654Z] Hora reportada por el servidor (T_server): 2026-10-30T23:32:16.648Z (Offset servidor: +2000.0 ms)
+[2026-10-30T23:32:14.656Z] [client-a] [2026-10-30T23:32:16.655Z] [Punto 7] RESULTADO SINCRONIZACIÓN:
+[2026-10-30T23:32:14.708Z] [client-c] [2026-10-30T23:32:16.706Z] --- Ronda de sincronización #3 (Cristian) ---
+[2026-10-30T23:32:14.708Z] [client-c] [2026-10-30T23:32:16.706Z] [Punto 1] Consultando http://time-server:8080/api/time?client=client-c...
+[2026-10-30T23:32:14.708Z] [client-c] [2026-10-30T23:32:16.706Z] [Punto 2] Instante T0 (envío): 2026-10-30T23:32:16.706Z
+[2026-10-30T23:32:14.712Z] [time-server] [2026-10-30T23:32:16.712Z] Hora despachada a [client-c]: 2026-10-30T23:32:16.712Z (demora=0 ms, offset=2000.0 ms)
+[2026-10-30T23:32:14.716Z] [client-c] [2026-10-30T23:32:16.714Z] [Punto 3] Instante T1 (recepción): 2026-10-30T23:32:16.714Z
+[2026-10-30T23:32:14.716Z] [client-c] [2026-10-30T23:32:16.715Z] [Punto 4] RTT calculado: 8.08 ms (Retardo unidireccional estimado RTT/2: 4.04 ms)
+[2026-10-30T23:32:14.716Z] [client-c] [2026-10-30T23:32:16.715Z] Hora reportada por el servidor (T_server): 2026-10-30T23:32:16.712Z (Offset servidor: +2000.0 ms)
+[2026-10-30T23:32:14.717Z] [client-c] [2026-10-30T23:32:16.715Z] [Punto 5] Hora estimada por Cristian [T_server + RTT/2]: 2026-10-30T23:32:16.716Z (Incertidumbre: ±4.04 ms)
+[2026-10-30T23:32:14.717Z] [client-c] [2026-10-30T23:32:16.716Z] [Punto 6] Reloj lógico ajustado sin tocar el reloj del SO. Corrección aplicada: +1.7 ms. (Offset: +1998.1 ms -> +1999.8 ms)
+[2026-10-30T23:32:14.717Z] [client-c] [2026-10-30T23:32:16.716Z] [Punto 7] RESULTADO SINCRONIZACIÓN:
+[2026-10-30T23:32:24.584Z] [client-b] [2026-10-30T23:32:26.573Z] --- Ronda de sincronización #4 (Cristian) ---
+[2026-10-30T23:32:24.584Z] [client-b] [2026-10-30T23:32:26.573Z] [Punto 1] Consultando http://time-server:8080/api/time?client=client-b...
+[2026-10-30T23:32:24.584Z] [client-b] [2026-10-30T23:32:26.573Z] [Punto 2] Instante T0 (envío): 2026-10-30T23:32:26.573Z
+[2026-10-30T23:32:24.585Z] [time-server] [2026-10-30T23:32:26.585Z] Hora despachada a [client-b]: 2026-10-30T23:32:26.585Z (demora=0 ms, offset=2000.0 ms)
+[2026-10-30T23:32:24.587Z] [client-b] [2026-10-30T23:32:26.576Z] [Punto 3] Instante T1 (recepción): 2026-10-30T23:32:26.576Z
+[2026-10-30T23:32:24.587Z] [client-b] [2026-10-30T23:32:26.576Z] Hora reportada por el servidor (T_server): 2026-10-30T23:32:26.585Z (Offset servidor: +2000.0 ms)
+[2026-10-30T23:32:24.587Z] [client-b] [2026-10-30T23:32:26.577Z] [Punto 4] RTT calculado: 2.91 ms (Retardo unidireccional estimado RTT/2: 1.46 ms)
+[2026-10-30T23:32:24.587Z] [client-b] [2026-10-30T23:32:26.577Z] [Punto 5] Hora estimada por Cristian [T_server + RTT/2]: 2026-10-30T23:32:26.586Z (Incertidumbre: ±1.46 ms)
+[2026-10-30T23:32:24.587Z] [client-b] [2026-10-30T23:32:26.587Z] [Punto 6] Reloj lógico ajustado sin tocar el reloj del SO. Corrección aplicada: +10.5 ms. (Offset: +1989.5 ms -> +1999.9 ms)
+[2026-10-30T23:32:24.588Z] [client-b] [2026-10-30T23:32:26.588Z] [Punto 7] RESULTADO SINCRONIZACIÓN:
+[2026-10-30T23:32:24.651Z] [client-a] [2026-10-30T23:32:26.651Z] --- Ronda de sincronización #4 (Cristian) ---
+[2026-10-30T23:32:24.652Z] [client-a] [2026-10-30T23:32:26.651Z] [Punto 1] Consultando http://time-server:8080/api/time?client=client-a...
+[2026-10-30T23:32:24.652Z] [client-a] [2026-10-30T23:32:26.651Z] [Punto 2] Instante T0 (envío): 2026-10-30T23:32:26.651Z
+[2026-10-30T23:32:24.653Z] [time-server] [2026-10-30T23:32:26.653Z] Hora despachada a [client-a]: 2026-10-30T23:32:26.653Z (demora=0 ms, offset=2000.0 ms)
+[2026-10-30T23:32:24.655Z] [client-a] [2026-10-30T23:32:26.654Z] [Punto 3] Instante T1 (recepción): 2026-10-30T23:32:26.654Z
+[2026-10-30T23:32:24.655Z] [client-a] [2026-10-30T23:32:26.654Z] [Punto 4] RTT calculado: 3.00 ms (Retardo unidireccional estimado RTT/2: 1.50 ms)
+[2026-10-30T23:32:24.655Z] [client-a] [2026-10-30T23:32:26.654Z] [Punto 5] Hora estimada por Cristian [T_server + RTT/2]: 2026-10-30T23:32:26.654Z (Incertidumbre: ±1.50 ms)
+[2026-10-30T23:32:24.655Z] [client-a] [2026-10-30T23:32:26.654Z] [Punto 6] Reloj lógico ajustado sin tocar el reloj del SO. Corrección aplicada: +0.4 ms. (Offset: +1999.4 ms -> +1999.8 ms)
+[2026-10-30T23:32:24.655Z] [client-a] [2026-10-30T23:32:26.654Z] Hora reportada por el servidor (T_server): 2026-10-30T23:32:26.653Z (Offset servidor: +2000.0 ms)
+[2026-10-30T23:32:24.655Z] [client-a] [2026-10-30T23:32:26.655Z] [Punto 7] RESULTADO SINCRONIZACIÓN:
+[2026-10-30T23:32:24.710Z] [client-c] [2026-10-30T23:32:26.710Z] --- Ronda de sincronización #4 (Cristian) ---
+[2026-10-30T23:32:24.710Z] [client-c] [2026-10-30T23:32:26.710Z] [Punto 1] Consultando http://time-server:8080/api/time?client=client-c...
+[2026-10-30T23:32:24.710Z] [client-c] [2026-10-30T23:32:26.710Z] [Punto 2] Instante T0 (envío): 2026-10-30T23:32:26.710Z
+[2026-10-30T23:32:24.712Z] [time-server] [2026-10-30T23:32:26.712Z] Hora despachada a [client-c]: 2026-10-30T23:32:26.712Z (demora=0 ms, offset=2000.0 ms)
+[2026-10-30T23:32:24.715Z] [client-c] [2026-10-30T23:32:26.715Z] [Punto 3] Instante T1 (recepción): 2026-10-30T23:32:26.715Z
+[2026-10-30T23:32:24.715Z] [client-c] [2026-10-30T23:32:26.715Z] [Punto 4] RTT calculado: 4.44 ms (Retardo unidireccional estimado RTT/2: 2.22 ms)
+[2026-10-30T23:32:24.715Z] [client-c] [2026-10-30T23:32:26.715Z] [Punto 5] Hora estimada por Cristian [T_server + RTT/2]: 2026-10-30T23:32:26.714Z (Incertidumbre: ±2.22 ms)
+[2026-10-30T23:32:24.715Z] [client-c] [2026-10-30T23:32:26.715Z] [Punto 6] Reloj lógico ajustado sin tocar el reloj del SO. Corrección aplicada: -0.3 ms. (Offset: +1999.8 ms -> +1999.5 ms)
+[2026-10-30T23:32:24.715Z] [client-c] [2026-10-30T23:32:26.715Z] [Punto 7] RESULTADO SINCRONIZACIÓN:
+[2026-10-30T23:32:24.715Z] [client-c] [2026-10-30T23:32:26.715Z] Hora reportada por el servidor (T_server): 2026-10-30T23:32:26.712Z (Offset servidor: +2000.0 ms)
+
+=== Estado del servidor de tiempo (al iniciar) ===
+time-server: status=ok hora=2026-10-30T23:31:56.3925212+00:00 offset=2000.0 ms
+
+=== Estado del servidor de tiempo (al final) ===
+time-server: status=ok hora=2026-10-30T23:32:31.4600994+00:00 offset=2000.0 ms
