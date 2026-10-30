@@ -36,6 +36,11 @@ string NodeName(string url) => new Uri(url).Host;
 Log($"Coordinador Berkeley iniciado. Nodos=[{string.Join(", ", nodes.Select(NodeName))}], " +
     $"intervalo={intervalSeconds} s, umbral={outlierThresholdMs} ms");
 
+// depends_on solo ordena el arranque de los contenedores: damos unos segundos
+// para que los nodos terminen de iniciar antes de la primera ronda.
+try { await Task.Delay(TimeSpan.FromSeconds(3), stopping.Token); }
+catch (OperationCanceledException) { }
+
 int round = 0;
 while (!stopping.IsCancellationRequested)
 {

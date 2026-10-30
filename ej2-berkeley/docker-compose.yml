@@ -1,0 +1,55 @@
+services:
+  node1:
+    build:
+      context: ./ClockNode
+    environment:
+      NODE_NAME: "node1"
+      INITIAL_OFFSET_MS: "5000"
+      RESPONSE_DELAY_MS: "0"
+    ports:
+      - "8181:8080"
+    networks:
+      - sync-network
+
+  node2:
+    build:
+      context: ./ClockNode
+    environment:
+      NODE_NAME: "node2"
+      INITIAL_OFFSET_MS: "10000"
+      RESPONSE_DELAY_MS: "0"
+    ports:
+      - "8182:8080"
+    networks:
+      - sync-network
+
+  node3:
+    build:
+      context: ./ClockNode
+    environment:
+      NODE_NAME: "node3"
+      INITIAL_OFFSET_MS: "-20000"
+      RESPONSE_DELAY_MS: "0"
+    ports:
+      - "8183:8080"
+    networks:
+      - sync-network
+
+  coordinator:
+    build:
+      context: ./BerkeleyCoordinator
+    environment:
+      NODES: "http://node1:8080,http://node2:8080,http://node3:8080"
+      INITIAL_OFFSET_MS: "0"
+      SYNC_INTERVAL_SECONDS: "15"
+      OUTLIER_THRESHOLD_MS: "60000"
+    depends_on:
+      - node1
+      - node2
+      - node3
+    networks:
+      - sync-network
+
+networks:
+  sync-network:
+    driver: bridge
