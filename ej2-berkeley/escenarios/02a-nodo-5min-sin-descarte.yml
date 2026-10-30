@@ -1,0 +1,9 @@
+# Escenario 2a: node3 con 5 minutos de desfase y SIN descarte de atípicos.
+# El umbral es tan alto que el nodo de 5 min entra en el promedio y lo arrastra.
+services:
+  node3:
+    environment:
+      INITIAL_OFFSET_MS: "300000"
+  coordinator:
+    environment:
+      OUTLIER_THRESHOLD_MS: "1000000000"

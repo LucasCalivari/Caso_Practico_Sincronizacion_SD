@@ -1,0 +1,9 @@
+# Escenario 2b: node3 con 5 minutos de desfase y CON descarte (umbral 60 s).
+# El coordinador excluye a node3 del promedio.
+services:
+  node3:
+    environment:
+      INITIAL_OFFSET_MS: "300000"
+  coordinator:
+    environment:
+      OUTLIER_THRESHOLD_MS: "60000"
