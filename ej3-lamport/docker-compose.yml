@@ -1,0 +1,34 @@
+services:
+  inventory-service:
+    build:
+      context: ./InventoryService
+    ports:
+      - "8282:8080"
+    networks:
+      - lamport-net
+
+  payments-service:
+    build:
+      context: ./PaymentsService
+    ports:
+      - "8283:8080"
+    networks:
+      - lamport-net
+
+  orders-service:
+    build:
+      context: ./OrdersService
+    ports:
+      - "8281:8080"
+    environment:
+      InventoryUrl: http://inventory-service:8080
+      PaymentsUrl: http://payments-service:8080
+    depends_on:
+      - inventory-service
+      - payments-service
+    networks:
+      - lamport-net
+
+networks:
+  lamport-net:
+    driver: bridge
